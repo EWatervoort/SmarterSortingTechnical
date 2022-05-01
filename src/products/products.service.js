@@ -17,7 +17,6 @@ function createRelation(ids) {
   return knex("ingredients_products")
     .insert(ids)
     .returning("*")
-    .then((createdRecords) => createdRecords[0]);
 }
 
 function list() {
